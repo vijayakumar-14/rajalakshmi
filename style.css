@@ -88,8 +88,34 @@ header {
     background: transparent; /* remove white background */
     box-shadow: none;
 
-    z-index: 100;
+    z-index: 1000;
 }
+
+/* Scroll Navbar */
+.fixed-nav{
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    background: white;
+    transition: top 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.fixed-nav.active{
+    top:0;
+}
+
+/* darker text for white navbar */
+.fixed-nav .nav-links a{
+    color:#333;
+}
+
+.fixed-nav .logo{
+    color:var(--primary-purple);
+}
+
 nav {
     display: flex;
     justify-content: space-between;
