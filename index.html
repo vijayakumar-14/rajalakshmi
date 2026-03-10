@@ -6,19 +6,20 @@
     <title>Campus Through My Lens</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">Rajalakshmi</div>
+            <div class="logo">MyLens</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About Campus</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#stories">Stories</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#behind-lens">Behind the Lens</a></li>
                 <li><a href="#team">Team</a></li>
-               
             </ul>
         </nav>
     </header>
@@ -27,7 +28,7 @@
         <div class="hero-content">
             <h1>Rajalakshmi Engineering College Through My Lens</h1>
             <p>Discover the unseen beauty and everyday moments of campus life.</p>
-            <a href="#gallery" class="btn-primary">Explore Gallery</a>
+            <a href="#gallery" class="btn-purple">Explore Gallery</a>
         </div>
     </section>
 
@@ -38,17 +39,17 @@
             
             <div class="grid-3">
                 <div class="card">
-                    <div class="img-placeholder aspect-video"></div>
+                    <div class="icon-wrapper"><i class="fa-solid fa-building"></i></div>
                     <h3>Infrastructure</h3>
                     <p>Modern blocks and architectural highlights.</p>
                 </div>
                 <div class="card">
-                    <div class="img-placeholder aspect-video"></div>
+                    <div class="icon-wrapper"><i class="fa-solid fa-lightbulb"></i></div>
                     <h3>Innovation Spaces</h3>
                     <p>Labs and hubs where ideas come to life.</p>
                 </div>
                 <div class="card">
-                    <div class="img-placeholder aspect-video"></div>
+                    <div class="icon-wrapper"><i class="fa-solid fa-leaf"></i></div>
                     <h3>Nature & Aesthetics</h3>
                     <p>Greenery and quiet spots around the campus.</p>
                 </div>
@@ -83,31 +84,47 @@
             <div class="featured-image img-placeholder"></div>
             <div class="featured-info">
                 <h2>Morning at the Main Block</h2>
-                <p class="location">Location: Campus Area</p>
+                <p class="location"><i class="fa-solid fa-location-dot"></i> Campus Area</p>
                 <p class="description">A serene view of the main building as the sun rises, capturing the quiet before the bustling college day begins.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="stories" class="section-padding bg-light">
+    <section id="behind-lens" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title">Campus Stories</h2>
-            <div class="grid-3">
-                <div class="story-card">
-                    <div class="img-placeholder aspect-square"></div>
-                    <h4>A Day at REC</h4>
-                    <p>Following the daily routine of engineering students.</p>
+            <h2 class="section-title">Behind the Lens</h2>
+            <p class="section-subtitle">The technical details behind capturing the perfect shot.</p>
+            
+            <div class="featured-layout">
+                <div class="featured-info tech-specs">
+                    <div class="spec-item">
+                        <i class="fa-solid fa-camera-retro spec-icon"></i>
+                        <div>
+                            <h4>Aperture</h4>
+                            <p>f/2.8 - for that shallow depth of field</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fa-solid fa-stopwatch spec-icon"></i>
+                        <div>
+                            <h4>Shutter Speed</h4>
+                            <p>1/200s - freezing the campus action</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fa-solid fa-film spec-icon"></i>
+                        <div>
+                            <h4>ISO</h4>
+                            <p>100 - keeping the noise low and crisp</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="story-card">
-                    <div class="img-placeholder aspect-square"></div>
-                    <h4>Morning to Evening</h4>
-                    <p>The changing colors of the campus sky.</p>
-                </div>
-                <div class="story-card">
-                    <div class="img-placeholder aspect-square"></div>
-                    <h4>Quiet Corners</h4>
-                    <p>Hidden gems for studying and relaxing.</p>
-                </div>
+                <div class="featured-image img-placeholder"></div>
             </div>
         </div>
     </section>
@@ -122,22 +139,32 @@
                     <div class="avatar-placeholder"></div>
                     <h3>Vikash</h3>
                     <p class="role">Developer / Designer</p>
+                    <div class="social-icons small">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
                 </div>
                 <div class="team-member">
                     <div class="avatar-placeholder"></div>
                     <h3>Vijaya Kumar A</h3>
                     <p class="role">Developer</p>
+                    <div class="social-icons small">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
                 </div>
                 <div class="team-member">
                     <div class="avatar-placeholder"></div>
-                    <h3>Raguram</h3>
+                    <h3>Raghuram</h3>
                     <p class="role">Photographer</p>
+                    <div class="social-icons small">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
+   
 
     <footer>
         <p>&copy; 2026 Campus Portfolio. All rights reserved.</p>
