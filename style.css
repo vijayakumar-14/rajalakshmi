@@ -111,10 +111,6 @@ nav {
     transition: color 0.3s;
 }
 
-.logo,
-.nav-links a {
-    text-shadow: 0 2px 6px rgba(0,0,0,0.5); /* Add a subtle shadow for better readability */
-}
 .nav-links a:hover { color: var(--primary-purple); }
 
 /* Hero Section */
@@ -139,7 +135,8 @@ nav {
     position: relative;
     height: 85vh;
     display: flex;
-    align-items: center;
+    padding-top: 1  00px; /* pushes content down for better visibility */
+    align-items: flex-start; /* aligns text towards top for better visibility */
     justify-content: center;
     text-align: center;
     overflow: hidden; /* prevents image overflow */
@@ -182,6 +179,7 @@ nav {
 
     max-width: 800px;
     color: white;
+    margin-top: 80px; /* pushes text down for better visibility */
 }
 
 .hero-bg img {
@@ -189,8 +187,28 @@ nav {
     object-position: center 40%;
 }
 
-.hero h1 { font-size: 3rem; margin-bottom: 20px; }
-.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white; /* changed from purple */
+
+    /* makes text visible on any background */
+    text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+}
+
+.logo span{
+    color: var(--primary-purple);
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
 
 /* About Cards */
 .card { text-align: center; padding: 20px; }
