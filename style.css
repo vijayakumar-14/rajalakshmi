@@ -1,8 +1,9 @@
 /* Base Styles & Reset */
 :root {
-    --primary-blue: #0f4c81;
-    --text-dark: #333;
-    --text-light: #666;
+    --primary-purple: #6a2a8e; /* The exact purple from your UI */
+    --primary-purple-hover: #552172;
+    --text-dark: #333333;
+    --text-light: #666666;
     --bg-light: #f4f6f9;
     --white: #ffffff;
     --placeholder-gray: #d1d5db;
@@ -39,7 +40,7 @@ h1, h2, h3, h4 { margin-bottom: 0.5rem; }
     gap: 30px;
 }
 
-/* Image Placeholders (Replace background-color with background-image URLs later) */
+/* Image Placeholders */
 .img-placeholder {
     background-color: var(--placeholder-gray);
     width: 100%;
@@ -59,23 +60,27 @@ h1, h2, h3, h4 { margin-bottom: 0.5rem; }
     background-position: center;
 }
 
-/* Buttons */
-.btn-primary {
+/* Purple Buttons */
+.btn-purple {
     display: inline-block;
-    padding: 10px 24px;
-    background-color: var(--primary-blue);
+    padding: 12px 28px;
+    background-color: var(--primary-purple);
     color: var(--white);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px; /* Pill shape matching the design */
     border: none;
     cursor: pointer;
     font-weight: 600;
+    transition: background-color 0.3s;
+}
+.btn-purple:hover {
+    background-color: var(--primary-purple-hover);
 }
 
 /* Navigation */
 header {
     background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -88,7 +93,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
 }
-.logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-blue); }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-purple); }
 .nav-links {
     list-style: none;
     display: flex;
@@ -100,13 +105,11 @@ nav {
     font-weight: 500;
     transition: color 0.3s;
 }
-.nav-links a:hover { color: var(--primary-blue); }
+.nav-links a:hover { color: var(--primary-purple); }
 
 /* Hero Section */
 .hero {
-    height: 80vh;
-    /* To add your hero image, uncomment the line below and add your image path */
-    /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('YOUR_IMAGE.jpg'); */
+    height: 70vh;
     background-color: #9ca3af; 
     display: flex;
     align-items: center;
@@ -118,24 +121,35 @@ nav {
 .hero h1 { font-size: 3rem; margin-bottom: 20px; }
 .hero p { font-size: 1.2rem; margin-bottom: 30px; }
 
+/* About Cards */
+.card { text-align: center; padding: 20px; }
+.icon-wrapper {
+    font-size: 2.5rem;
+    color: var(--primary-purple);
+    margin-bottom: 15px;
+}
+
 /* Gallery Section */
 .filter-tags {
     display: flex;
     gap: 10px;
     margin-bottom: 30px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .filter-tags button {
-    padding: 8px 16px;
-    border: 1px solid var(--placeholder-gray);
+    padding: 8px 20px;
+    border: 2px solid var(--primary-purple);
+    color: var(--primary-purple);
     background: transparent;
-    border-radius: 20px;
+    border-radius: 25px;
     cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
 }
-.filter-tags button.active {
-    background: var(--primary-blue);
+.filter-tags button.active, .filter-tags button:hover {
+    background: var(--primary-purple);
     color: var(--white);
-    border-color: var(--primary-blue);
 }
 .gallery-grid {
     display: grid;
@@ -147,36 +161,75 @@ nav {
 .gallery-item.tall { grid-row: span 2; }
 .gallery-item.wide { grid-column: span 2; }
 
-/* Featured Shots */
+/* Featured & Behind the Lens */
 .featured-layout {
     display: flex;
     gap: 50px;
     align-items: center;
 }
-.featured-image {
-    flex: 2;
-    height: 400px;
-}
+.featured-image { flex: 1.5; height: 400px; }
 .featured-info { flex: 1; }
-.featured-info .location { font-weight: 600; margin: 15px 0; color: var(--primary-blue); }
+.featured-info .location { 
+    font-weight: 600; 
+    margin: 15px 0; 
+    color: var(--primary-purple); 
+}
+
+/* Tech Specs */
+.tech-specs { display: flex; flex-direction: column; gap: 20px; }
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.spec-icon {
+    font-size: 2rem;
+    color: var(--primary-purple);
+    background: var(--bg-light);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.social-icons i {
+    font-size: 1.5rem;
+    color: var(--primary-purple);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.social-icons i:hover { color: var(--primary-purple-hover); }
+.social-icons.small { justify-content: center; margin-top: 10px; }
+.social-icons.small i { font-size: 1.2rem; }
 
 /* Team Section */
 .team-member { text-align: center; }
-.team-member .role { color: var(--primary-blue); font-size: 0.9rem; }
+.team-member .role { color: var(--text-light); font-size: 0.9rem; }
 
 /* Contact Section */
-.contact-layout {
-    display: flex;
-    gap: 50px;
-}
+.contact-layout { display: flex; gap: 50px; }
 .contact-info, .contact-form { flex: 1; }
+.contact-details p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+}
+.contact-details i { color: var(--primary-purple); font-size: 1.2rem; }
 form { display: flex; flex-direction: column; gap: 15px; }
 input, textarea {
     padding: 12px;
     border: 1px solid var(--placeholder-gray);
     border-radius: 5px;
     font-family: inherit;
+    outline: none;
 }
+input:focus, textarea:focus { border-color: var(--primary-purple); }
 
 /* Footer */
 footer {
@@ -186,9 +239,9 @@ footer {
     color: var(--white);
 }
 
-/* Simple Responsive Fixes */
+/* Responsive Fixes */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Add a hamburger menu for full mobile support later */
+    .nav-links { display: none; } 
     .featured-layout, .contact-layout { flex-direction: column; }
     .hero h1 { font-size: 2rem; }
     .gallery-item.large, .gallery-item.wide { grid-column: span 1; }
