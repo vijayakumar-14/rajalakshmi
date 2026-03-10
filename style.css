@@ -110,7 +110,12 @@ nav {
 /* Hero Section */
 .hero {
     height: 70vh;
-    background-color: #9ca3af; 
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                      url("hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,6 +123,7 @@ nav {
     color: var(--white);
     padding: 0 20px;
 }
+
 .hero h1 { font-size: 3rem; margin-bottom: 20px; }
 .hero p { font-size: 1.2rem; margin-bottom: 30px; }
 
