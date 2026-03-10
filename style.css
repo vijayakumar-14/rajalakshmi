@@ -293,11 +293,19 @@ nav {
 
 /* Featured & Behind the Lens */
 .featured-layout {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* image left, text right */
     gap: 50px;
     align-items: center;
 }
-.featured-image { flex: 1.5; height: 400px; }
+
+.featured-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:12px;
+}
+
 .featured-info { flex: 1; }
 .featured-info .location { 
     font-weight: 600; 
