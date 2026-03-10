@@ -295,8 +295,10 @@ nav {
 .featured-layout {
     display: grid;
     grid-template-columns: 1fr 1fr; /* image left, text right */
-    gap: 50px;
+    gap: 80px;
     align-items: center;
+    flex: 1;
+    padding: 20px 40px;
 }
 
 .featured-image img{
@@ -304,6 +306,14 @@ nav {
     height:100%;
     object-fit:cover;
     border-radius:12px;
+}
+
+.featured-info h2{
+    margin-bottom: 20px;
+}
+
+.featured-info p{
+    line-height: 1.8;
 }
 
 .featured-info { flex: 1; }
