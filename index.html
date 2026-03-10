@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Through My Lens</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">MyLens</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Rajalakshmi Engineering College Through My Lens</h1>
+            <p>Discover the unseen beauty and everyday moments of campus life.</p>
+            <a href="#gallery" class="btn-primary">Explore Gallery</a>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">About the Campus</h2>
+            <p class="section-subtitle">A brief overview of the vibrant spaces that make up our college environment.</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <div class="img-placeholder aspect-video"></div>
+                    <h3>Infrastructure</h3>
+                    <p>Modern blocks and architectural highlights.</p>
+                </div>
+                <div class="card">
+                    <div class="img-placeholder aspect-video"></div>
+                    <h3>Innovation Spaces</h3>
+                    <p>Labs and hubs where ideas come to life.</p>
+                </div>
+                <div class="card">
+                    <div class="img-placeholder aspect-video"></div>
+                    <h3>Nature & Aesthetics</h3>
+                    <p>Greenery and quiet spots around the campus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            
+            <div class="filter-tags">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="architecture">Architecture</button>
+                <button data-filter="student-life">Student Life</button>
+                <button data-filter="nature">Nature</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item img-placeholder large" data-category="architecture"></div>
+                <div class="gallery-item img-placeholder" data-category="student-life"></div>
+                <div class="gallery-item img-placeholder" data-category="nature"></div>
+                <div class="gallery-item img-placeholder tall" data-category="architecture"></div>
+                <div class="gallery-item img-placeholder wide" data-category="student-life"></div>
+                <div class="gallery-item img-placeholder" data-category="nature"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="section-padding">
+        <div class="container featured-layout">
+            <div class="featured-image img-placeholder"></div>
+            <div class="featured-info">
+                <h2>Morning at the Main Block</h2>
+                <p class="location">Location: Campus Area</p>
+                <p class="description">A serene view of the main building as the sun rises, capturing the quiet before the bustling college day begins.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="stories" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Campus Stories</h2>
+            <div class="grid-3">
+                <div class="story-card">
+                    <div class="img-placeholder aspect-square"></div>
+                    <h4>A Day at REC</h4>
+                    <p>Following the daily routine of engineering students.</p>
+                </div>
+                <div class="story-card">
+                    <div class="img-placeholder aspect-square"></div>
+                    <h4>Morning to Evening</h4>
+                    <p>The changing colors of the campus sky.</p>
+                </div>
+                <div class="story-card">
+                    <div class="img-placeholder aspect-square"></div>
+                    <h4>Quiet Corners</h4>
+                    <p>Hidden gems for studying and relaxing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Meet the Team</h2>
+            <p class="section-subtitle">The creative minds behind this portfolio.</p>
+            
+            <div class="grid-3">
+                <div class="team-member">
+                    <div class="avatar-placeholder"></div>
+                    <h3>Vijaya Kumar A</h3>
+                    <p class="role">Lead Developer / Designer</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar-placeholder"></div>
+                    <h3>Kowsi</h3>
+                    <p class="role">Lead Photographer</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar-placeholder"></div>
+                    <h3>Hayagiri</h3>
+                    <p class="role">Content & Editing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-light">
+        <div class="container contact-layout">
+            <div class="contact-info">
+                <h2 class="section-title">Contact</h2>
+                <p>Have questions or want to collaborate? Reach out to us.</p>
+                <p>Email: example@email.com</p>
+            </div>
+            <div class="contact-form">
+                <form id="portfolio-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Campus Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
